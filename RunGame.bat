@@ -1,5 +1,4 @@
-@ECHO OFF
-
+ECHO ON
 pushd %~dp0
 
 Set "VIRTUAL_ENV=pyenv"
@@ -10,7 +9,6 @@ IF NOT EXIST "%VIRTUAL_ENV%\Scripts\activate.bat" (
 )
 
 CALL %VIRTUAL_ENV%\Scripts\activate.bat
-ECHO ON
 CALL python -m pip install --upgrade pip
 CALL pip install pygame
 CALL python basegame.py

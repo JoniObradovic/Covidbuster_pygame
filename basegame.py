@@ -58,7 +58,6 @@ attack = False
 bomb = False
 bombThrown = False
 selectedWeapon = 1
-
 #pommin pyöriminen
 bombOnScreen = False
 roll = True
@@ -100,9 +99,9 @@ def game(tason):
     # valitaan randomilla taustamusiikki 4 vaihtoehdosta
     backgroundMusic = mixer.music.load(f"Sounds/BackgroundMusic/{random.randint(0,3)}.wav")
     # asetetaan äänenvoimakkuus d
-    backgroundMusic = mixer.music.set_volume(0.05)
+    backgroundMusic = mixer.music.set_volume(0.25)
     # soitetaan taustamusiikkia loputtomalla loopilla
-    #pygame.mixer.music.play(-1)
+    pygame.mixer.music.play(-1)
 
 
     # Pelaajan toimintamuuttujat
@@ -544,7 +543,7 @@ def game(tason):
         #tähtäys hiirellä
         def aimMouse(self):
             #haetaan hiiren position
-            
+            global pos_correction, pos_correction_left
             if show == True:
                 mouseposition = mousepositionLista
             else:
@@ -1690,9 +1689,9 @@ def game(tason):
                 # Jos painetaan Q
                 if event.key == pygame.K_q:
                     bomb = True
-                #if event.key == pygame.K_e:
-                    #show = True
-                    #pygame.mouse.set_visible(True)
+                if event.key == pygame.K_e:
+                    show = True
+                    pygame.mouse.set_visible(True)
 
                 if event.key == pygame.K_f:
                     pelaaja1.ultimate()
@@ -1726,28 +1725,6 @@ def game(tason):
         pygame.display.update()
 
     pygame.quit()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

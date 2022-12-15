@@ -2,7 +2,7 @@
 2d platform shooter with pygame ( 1st year project in school )
 
 Install:\
-Download zip, unpack to a folder and execute RunGame.bat
+Download zip (~84MB), unpack to a folder and execute RunGame.bat
 
 Controls:\
 mouse = aim\
